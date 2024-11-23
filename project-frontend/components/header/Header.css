@@ -16,6 +16,24 @@ nav.login-page{
     list-style: none;
 }
 
+.nav-items ul a{
+    color:#454545;
+    padding-left: 40px;
+    position: relative;
+    z-index: 3;
+}
+
+.nav-items ul li.active a{
+    color: #6B80FF;
+    position: relative;
+    z-index: 2;
+}
+
+
+.nav-items ul li{
+    font-size: 28px;
+}
+
 .nav-items ul{
     display: flex;
     gap: 50px;
@@ -34,4 +52,59 @@ nav.login-page{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.exams,.calendar,.help{
+    position: relative;
+}
+
+.exams::before{
+    content:"";
+    background:url('../../src/assets/icons/description_24dp_454545_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.exams.active::before{
+    background:url('../../src/assets/icons/description_24dp_6B80FF_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
+    background-size: 30px;
+}
+
+.calendar::before{
+    content:"";
+    background:url('../../src/assets/icons/calendar_today_24dp_454545_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.calendar.active::before{
+    background:url('../../src/assets/icons/calendar_today_24dp_6B80FF_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
+    background-size: 30px;
+}
+
+.help::before{
+    content:"";
+    background:url('../../src/assets/icons/call_24dp_454545_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left:0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.help.active::before{
+    background:url('../../src/assets/icons/call_24dp_6B80FF_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
+    background-size: 30px;
 }

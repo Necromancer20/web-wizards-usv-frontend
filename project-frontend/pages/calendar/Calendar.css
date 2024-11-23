@@ -1,0 +1,51 @@
+.fc-view-harness{
+    border-radius: 20px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.fc-theme-standard td, .fc-theme-standard th{
+    border: transparent;
+    border-inline: 2px solid #d9d9d9;
+}
+
+.fc-timegrid-slots tr:nth-child(2n+1){
+    border-top: 1px solid #d9d9d9;
+}
+
+.fc-scrollgrid-section:has(.fc-timegrid-axis-cushion){
+    display: none;
+}
+
+.fc .fc-col-header-cell-cushion{
+    padding: 20px;
+}
+
+.fc-day-today a{
+    color: #6B80FF !important;
+}
+
+.fc-col-header-cell-cushion{
+    color: #454545;
+}
+
+.fc-col-header-cell-cushion:hover{
+    color: #454545;
+}
+
+.fc .fc-button-group > .fc-button{
+    background: transparent;
+    border: none;
+    color: #000;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active, .fc .fc-button-primary:not(:disabled):active{
+    background:transparent;
+    color: #000;
+    border: none;
+}
+
+.fc .fc-button-primary:focus{
+    box-shadow: none;
+}

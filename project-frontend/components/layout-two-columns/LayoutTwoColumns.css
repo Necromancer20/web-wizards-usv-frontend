@@ -1,0 +1,13 @@
+.two-column-layout{
+    display: flex;
+    gap: 30px;
+    padding: 15px;
+}
+
+.left-column{
+    width: 25%;
+}
+
+.right-column{
+    width: 75%;
+}

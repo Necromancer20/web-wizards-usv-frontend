@@ -82,3 +82,11 @@ body{
 .right-side{
   width: 75%;
 }
+
+.fc-event-resizer{
+  pointer-events: none;
+}
+
+.fc-toolbar-title{
+  text-transform: capitalize;
+}
