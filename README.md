@@ -1,5 +1,12 @@
 ## Dupa descarcarea proiectului
 
+Descarcam node 20.9 > in caz ca nu avem, dupa care in terminal prin comanda:
+
+```bash
+ node -v
+```
+vom verifica sa fie cel putin 20.9.x
+
 Accesam proiectul prin comanda :
 
 ```bash
