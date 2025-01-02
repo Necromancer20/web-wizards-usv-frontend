@@ -30,9 +30,9 @@ export default function CalendarPage() {
                         initialView={initialView} 
                         locale={roLocale}
                         headerToolbar={{
-                            start: "prev,next",
-                            center: "title",
-                            end: "timeGridWeek,dayGridMonth,dayGridDay",
+                            start: "prev,next,title",
+                            center: "",
+                            end: "",
                         }}
                         editable={false}
                         selectable={false}
@@ -41,7 +41,7 @@ export default function CalendarPage() {
                             { title: 'Eveniment 2', start: '2024-11-23T14:00:00', end: '2024-11-23T16:00:00' },
                         ]}
                         slotMinTime="08:00:00"
-                        slotMaxTime="21:00:00"
+                        slotMaxTime="20:00:00"
                         datesSet={(dateInfo) => {
                             const formattedTitle = formatTitle(dateInfo.start);
                             document.querySelector('.fc-toolbar-title').textContent = formattedTitle;

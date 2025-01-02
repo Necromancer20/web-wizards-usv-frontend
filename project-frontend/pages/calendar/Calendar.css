@@ -1,6 +1,5 @@
 .fc-view-harness{
     border-radius: 20px;
-    border: 2px solid #fff;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
@@ -48,4 +47,22 @@
 
 .fc .fc-button-primary:focus{
     box-shadow: none;
+}
+
+.big-calendar-wrapper .fc-toolbar-chunk > div {
+    display: flex;
+    align-items: center;
+
+}
+
+.fc .fc-button-primary:hover{
+    background-color: transparent;
+    color: #000;
+    border: none;
+}
+
+.fc .fc-button-primary{
+    background-color: transparent;
+    color: #000;
+    border: none;
 }
