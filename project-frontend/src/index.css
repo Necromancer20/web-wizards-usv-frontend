@@ -65,7 +65,6 @@ button:focus-visible {
 }
 
 body{
-  height: 100dvh;
   background: #F5F6FA;
   margin: 0;
   color: #000;
@@ -89,4 +88,32 @@ body{
 
 .fc-toolbar-title{
   text-transform: capitalize;
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus, .fc .fc-button-primary:not(:disabled):active:focus{
+  box-shadow: none;
+}
+
+.fc .fc-daygrid-day-top{
+  justify-content: center;
+}
+
+.fc thead > tr {
+  background-color:#F8F9FF; 
+}
+
+.fc thead > tr th{
+  border-top: none;
+}
+
+.fc-direction-ltr{
+  max-height: calc(100vh - 150px);
+}
+
+.fc .fc-toolbar.fc-header-toolbar{
+  padding-block: 10px;
+}
+
+.fc .fc-button .fc-icon{
+  font-size: 3rem;
 }
