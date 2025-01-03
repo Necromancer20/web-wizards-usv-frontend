@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useUserStore } from '../stores/useUserStore';
 import axios from 'axios';
 
 import './AuthCard.css';
@@ -10,6 +11,8 @@ export default function AuthCard() {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const setUser = useUserStore((state) => state.setUser);
+
   const handleLogin = async () => {
     const url = import.meta.env.VITE_API_KEY + `/utilizator/login?email=${encodeURIComponent(email)}&parola=${encodeURIComponent(password)}`;
 
@@ -19,7 +22,10 @@ export default function AuthCard() {
       if (response.status === 200) {
         console.log('Login reușit!', response.data);
         const user = response.data;
-        console.log(user);
+        setUser(user);
+
+        localStorage.setItem('user', JSON.stringify(user));
+
         navigate('/');
       }
     } catch (error) {
@@ -53,6 +59,7 @@ export default function AuthCard() {
         />
       </div>
       <button onClick={handleLogin}>Login</button>
+      <Link to='/'>INTRĂ FĂRĂ CONT</Link>
       {error && <p>{error}</p>}
     </div>
   );
