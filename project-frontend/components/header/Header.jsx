@@ -1,10 +1,21 @@
 import React from 'react';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useUserStore } from "../stores/useUserStore";
 import Logo from "../logo/Logo";
 import './Header.css';
 
 export default function Header() {
     const location = useLocation();
+    const navigate = useNavigate();
+    const setUser = useUserStore((state) => state.setUser);
+    const user = useUserStore((state) => state.user);
+
+    const handleLogout = () => {
+        setUser(null);
+        localStorage.removeItem('user');
+        navigate('/login');
+    };
+
     const logoClass = location.pathname === "/login" ? "login-page" : "";
 
     return (
@@ -18,11 +29,11 @@ export default function Header() {
                 <div className="right-side">
                     <div className="nav-items">
                         <ul>
-                            <li className={`exams ${location.pathname === "/examene" ? "active" : ""}`}>
+                            {user&&<li className={`exams ${location.pathname === "/examene" ? "active" : ""}`}>
                                 <Link to="/examene">
                                     Examene
                                 </Link>
-                            </li>
+                            </li>}
                             <li className={`calendar ${location.pathname === "/calendar" ? "active" : ""}`}>
                                 <Link to="/calendar">
                                     Calendar
@@ -36,7 +47,8 @@ export default function Header() {
                         </ul>
                     </div>
                     <div>
-                        popescu.ion@usv.ro
+                        {user?.email && <span>{user.email}</span>}
+                        {user?<button onClick={handleLogout}>Logout</button>:<Link to='/login'>Login</Link>}
                     </div>
                 </div>
             </nav>
