@@ -117,3 +117,68 @@ body{
 .fc .fc-button .fc-icon{
   font-size: 3rem;
 }
+
+.fc-v-event .fc-event-title{
+  text-align: center;
+}
+
+.fc-timegrid-event .fc-event-time{
+  text-align: center;
+}
+
+.fc-event-main p{
+  margin-block: 3px;
+  text-align: center;
+}
+
+.fc-event-main div{
+  text-align: center;
+}
+
+.fc-event-main {
+  position: relative;
+}
+
+.fc-event-main .status{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-transform: uppercase;
+  background-color: #F3F3F3;
+  margin:0;
+}
+
+.fc .fc-v-event{
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  margin: 3px 0;
+}
+
+.fc-timegrid-event .fc-event-main:has(.status.confirmat){
+  background-color: #798CFF;
+}
+
+.fc-timegrid-event .fc-event-main:has(.status.in_asteptare){
+  background-color: #FFB29E;
+}
+
+.fc-timegrid-event .fc-event-main:has(.status.refuzat){
+  background-color: #FF481B;
+}
+
+.fc-event-main .status{
+  color: #FF633D;
+}
+
+.fc-event-main .status.confirmat{
+  color: #00C864;
+}
+
+.fc-event-main div{
+  max-height: calc(100% - 20px);
+  scrollbar-width: thin;
+  overflow: auto;
+}
+
