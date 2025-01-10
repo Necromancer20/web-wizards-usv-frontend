@@ -149,6 +149,17 @@ body{
   margin:0;
 }
 
+.overlay{
+  position: fixed;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
 .fc .fc-v-event{
   background-color: transparent !important;
   border: none !important;
@@ -156,7 +167,16 @@ body{
   margin: 3px 0;
 }
 
-.fc-timegrid-event .fc-event-main:has(.status.confirmat){
+.fc-timegrid-event .fc-event-main{
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fc-event-main > div:hover{
+  cursor: pointer;
+}
+
+.fc-timegrid-event .fc-event-main:has(.status.aceptat){
   background-color: #798CFF;
 }
 
@@ -172,7 +192,7 @@ body{
   color: #FF633D;
 }
 
-.fc-event-main .status.confirmat{
+.fc-event-main .status.aceptat{
   color: #00C864;
 }
 
@@ -180,5 +200,15 @@ body{
   max-height: calc(100% - 20px);
   scrollbar-width: thin;
   overflow: auto;
+}
+
+
+.login-header{
+  background-color: #fff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e3e3e3;
 }
 

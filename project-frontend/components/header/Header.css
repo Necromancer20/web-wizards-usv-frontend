@@ -108,3 +108,25 @@ nav.login-page{
     background:url('../../src/assets/icons/call_24dp_6B80FF_FILL0_wght400_GRAD0_opsz24.svg') center no-repeat;
     background-size: 30px;
 }
+
+.login-button{
+    background-color: #6B80FF;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.login-button:hover{
+    color: #fff;
+}
+
+.user-block{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-email{
+    color: #454545;
+    font-weight: 600;
+}
