@@ -5,11 +5,12 @@
 .login-page {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+    align-items: center;
+    height: calc(100dvh - 120px);
     background-color: #f5f6f8;
-    padding-top: 50px;
     overflow: hidden;
+    background: url('../../src/assets/images/minimalist-white-abstract-background_23-2148816315.jpeg') center no-repeat;
+    background-size: cover;
   }
 
   body, html {
@@ -18,3 +19,5 @@
     height: 100%;
     overflow: hidden;
   }
+
+  

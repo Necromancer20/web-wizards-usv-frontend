@@ -46,9 +46,9 @@ export default function Header() {
                             </li>
                         </ul>
                     </div>
-                    <div>
-                        {user?.email && <span>{user.email}</span>}
-                        {user?<button onClick={handleLogout}>Logout</button>:<Link to='/login'>Login</Link>}
+                    <div className='user-block'>
+                        {user?.email && <span className='user-email'>{user.email}</span>}
+                        {user?<button onClick={handleLogout}>Deconectare</button>:<Link className='login-button' to='/login'>Login</Link>}
                     </div>
                 </div>
             </nav>

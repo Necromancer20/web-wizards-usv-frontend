@@ -1,8 +1,6 @@
 .auth-card {
     width: 50vw;
-    height: 50vw;
     max-width: 400px;
-    max-height: 400px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -26,14 +24,15 @@
     width: 300px;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #e9e2e2af;
-    border-color: #e9e2e2af;
+    background-color: #EDF0F5;
+    border: none;
+    border-radius: 5px;
     color: #000000;
   }
   
   .auth-card button {
     padding: 10px 20px;
-    background-color: #002855;
+    background-color:#576FFF;
     width: 300px;
     color: white;
     border: none;
@@ -42,13 +41,13 @@
   }
   
   .auth-card button:hover {
-    background-color: #357acb;
+    background-color: #576FFF;
   }
   
   .auth-card a {
-    margin-top: 10px;
+    margin-top: 30px;
     text-decoration: none;
-    color: #007bff;
+    color: #576FFF;
   }
   
   .auth-card a:hover {
